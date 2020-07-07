@@ -24,8 +24,8 @@ def tpot_run(df, target_col):
     X_train, X_test, y_train, y_test = train_test_split(
         data, target, train_size=0.75, test_size=0.25)
 
-    tpot = TPOTClassifier(generations=1,
-                          population_size=1,
+    tpot = TPOTClassifier(generations=100,
+                          population_size=100,
                           offspring_size=None,  # this gets set to population_size
                           mutation_rate=0.9,
                           crossover_rate=0.1,
